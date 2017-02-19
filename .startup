@@ -1,0 +1,3 @@
+# Start
+eval $(ssh-agent -s)
+ssh-add /home/Starburst/.ssh/id_rsa
