@@ -1,0 +1,19 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "command": "killall",
+            "taskName": "kill",
+            "isShellCommand": true,
+            "isBackground": true,
+            "args": ["\"Flash Player Debugger\""]
+        }, 
+        {
+            "command": "haxelib",
+            "taskName": "build",
+            "isBuildCommand": true,
+            "args": ["run", "openfl", "test", "project.xml", "flash", "-debug"]
+        }
+    ],
+    "problemMatcher": "$haxe"
+}
