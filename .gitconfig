@@ -1,9 +1,15 @@
 [push]
 	default = matching
+[pull]
+	rebase = true
 [core]
 	trustctime = false
 	editor = vim
 	filemode = false
+[alias]
+	ignore = !git update-index --assume-unchanged 
+	unignore = !git update-index --no-assume-unchanged
+	ignored = !git ls-files -v | grep ^[a-z]
 [color]
 	ui = true
 [credential]
