@@ -2,9 +2,24 @@
     "version": "0.2.0",
     "configurations": [
         {
+			"name": "iOS: Debug",
+			"runtimeExecutable": "${execPath}",
+			"args": [
+                "compilePath=${workspaceRoot}",
+				"compileCommand=openfl build ios -Dtest -v -Ddev -debug -DHXCPP_DEBUGGER",
+				"runPath=${workspaceRoot}",///export/production/debug/ios/debug/build/Debug-iphoneos/Main.app/",
+				"runCommand=openfl run ios -debug",//Main",
+				"runInTerminal=false"
+			],
+			"type": "hxcpp",
+			"request": "launch",
+			"program": "",
+			"stopOnEntry": true
+		},
+        {
             "name": "Flash",
             "type": "fdb",
-            "request": "launch",
+            "request": "attach",
             "program": "${workspaceRoot}/export/production/debug/flash/debug/bin/Main.swf"
         }
     ]

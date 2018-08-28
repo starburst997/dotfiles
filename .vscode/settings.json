@@ -1,24 +1,35 @@
 // Place your settings in this file to overwrite default and user settings.
 {
     "haxe.displayConfigurations": [ // one or more configurations for the haxe completion server
-        ["export/production/debug/flash/debug/haxe/debug.hxml"] // hxml file is an normal haxe argument too
+        ["export/production/debug/flash/debug/haxe/debug.hxml"],
+        ["--cwd", "test", "test.hxml"],
+        ["balance-event.hxml"]
+        //[".vscode/vscode.hxml"] // hxml file is an normal haxe argument too
     ],
+    "haxe.enableCompilationServer": true,
+    "haxe.buildCompletionCache": true,
+    "haxe.displayPort": 6002,
     "haxe.displayServer": { // configuration for starting haxe completion server itself
         "haxePath": "haxe", // path to the executable (default: `haxe`)
-        "arguments": ["-v"], // arguments before --wait (-v is useful for debugging)
-
+        "arguments": ["v"], // arguments before --wait (-v is useful for debugging)
+        
         // platform-specific overrides of the keys above
         // they will be merged into the default configuration
         "windows": {},
         "linux": {},
         "osx": {}
     },
+    "[javascript]": {
+        "editor.tabSize": 2
+    },
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.editor.enablePreview": false,
     "search.exclude": {
         "export": true,
         "dump":true,
-        "lime":true,
-        "openfl":true,
-        "assets":true
+        "corelib/haxe/lime":false,
+        "corelib/haxe/hxcpp":false,
+        "assets":false
     },
     "files.associations": {
         "atomic": "cpp",
